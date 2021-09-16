@@ -91,13 +91,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink tag={Link} to="/about">
                 <i class="fa fa-address-card"></i>
-                <p>About</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/projects">
-                <i class="fa fa-pencil"></i>
-                <p>Projects</p>
+                <p>Experiences</p>
               </NavLink>
             </NavItem>
             <NavItem>

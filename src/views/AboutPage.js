@@ -25,11 +25,11 @@ import {
   Row,
   Col,
   UncontrolledCollapse,
-  Button,
   Card,
-  CardTitle,
   CardBody,
+  NavLink
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "../assets/css/AboutPage.css";
 
 // core components
@@ -75,9 +75,9 @@ function AboutPage() {
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
               <p>
-                Hello! My name is James Zhou. I'm currently a third year student
+                Hello! My name is James Zhou. I'm currently a fourth year student
                 studying computer science at UCLA. Outside of coding, I enjoy
-                playing ultimate frisbee competitively, photography, and others
+                playing music, photography, and others
                 that you can check out on my hobbies page!
               </p>
             </Col>
@@ -92,7 +92,6 @@ function AboutPage() {
                 <h4 class="education" name="education">
                   Education
                 </h4>
-
                 <ul class="textList">
                   <li>
                     <p>
@@ -100,7 +99,7 @@ function AboutPage() {
                       Expected June 2022
                     </p>
                     <ul>
-                      <li>GPA: 3.67</li>
+                      <li>GPA: 3.66</li>
                     </ul>
                   </li>
                   <li>
@@ -123,17 +122,76 @@ function AboutPage() {
               <div>
                 <h4 class="experience" name="experience">
                   Experience
-                </h4>
-                <ul class="textList">
-                  <li>
-                    <p>
-                      <b>Amazon Web Services </b>- Software Development
-                      Engineering Intern, <i>Seattle, WA</i>{" "}
-                      <span style={{ float: "right" }}>
-                        June 2020 - September 2020
-                      </span>
-                    </p>
-                    <ul>
+                </h4>   
+                <Table hover borderless>
+                  <tbody>
+                    <tr>
+                      <td id="uber">
+                      <Row style={{padding: "20px 0px"}}>
+                          <Col xs="3" sm="2">
+                          <img src={require("assets/img/uber.svg")} alt="uber logo" ></img>
+                          </Col>
+                          <Col>
+                          <b>Uber</b>
+                          <p>
+                            Software
+                            Engineer Intern, <i>San Francisco, CA</i>
+                          </p>
+                          <p>
+                            June 2021 - September 2021
+                          </p>
+                          </Col>
+                        </Row>
+                      </td>
+                    </tr>
+                    <UncontrolledCollapse toggler="#uber">
+                      <Card>
+                        <CardBody>
+                        <ul>
+                      <li>
+                       Developed tools for platform migration as member of Experimentation API team
+                      </li>
+                      <li>
+                      Created a utility tool that assists users with migrating experiments to the new platform
+                              </li>
+                      <li>
+                      Built tool to safely shut down 25K experiments in old platform with minimum impact to live services
+                      </li>
+                      <li>
+                      Improved performance by minimizing latency in realtime configuration fetching process
+                      </li>
+                      <li>
+                      Technologies: Python, Golang, SQL, Apache Thrift, S3
+                      </li>
+                    </ul>
+               
+                        </CardBody>
+                      </Card>
+                    </UncontrolledCollapse>{" "}
+                    <tr>
+                      <td id="aws">
+                        <Row style={{padding: "20px 0px"}}>
+                          <Col xs="3" sm="2">
+                          <img src={require("assets/img/aws.png")} alt="aws logo" ></img>
+                          </Col>
+                          <Col>
+                          <b>Amazon Web Services</b>
+                          <p>
+                            Software Development
+                            Engineering Intern, <i>Seattle, WA</i>
+                          </p>
+                          <p>
+                            June 2020 - September 2020
+                          </p>
+                          </Col>
+                        </Row>
+                        
+                        </td>
+                    </tr>
+                    <UncontrolledCollapse toggler="#aws">
+                      <Card>
+                        <CardBody>
+                        <ul>
                       <li>
                         Created serverless ETL jobs pipeline to parse and scale
                         server thermal validation Excel reports for the
@@ -152,19 +210,34 @@ function AboutPage() {
                         Kinesis, Cognito, Glue, Redshift and others
                       </li>
                     </ul>
-                  </li>
-
-                  <li>
-                    <p>
-                      <b>Code Inspector </b>- Software Development Contractor,{" "}
-                      <i>San Francisco, CA</i>
-                      <span style={{ float: "right" }}>
-                        June 2019 - September 2019
-                      </span>
-                    </p>
-                    <ul>
+              
+                        </CardBody>
+                      </Card>
+                        </UncontrolledCollapse>
+                    <tr>
+                      <td id="codeInspector">
+                      <Row style={{padding: "20px 0px"}}>
+                          <Col xs="3" sm="2">
+                          <img src={require("assets/img/codeinspector.png")} alt="code inspector logo" style={{maxWidth:120}}></img>
+                          </Col>
+                          <Col>
+                          <b>Code Inspector</b>
+                          <p>
+                            Software Development Contractor, <i>San Francisco, CA</i>
+                          </p>
+                          <p>
+                            June 2019 - September 2019
+                          </p>
+                          </Col>
+                        </Row>
+                      </td>
+                    </tr>
+                    <UncontrolledCollapse toggler="#codeInspector">
+                    <Card>
+                      <CardBody>
+                      <ul>
                       <li>
-                        Design and Implemented a{" "}
+                        Designed and Implemented a{" "}
                         <a
                           href="https://chrome.google.com/webstore/detail/code-inspector/nmeniolijnmncfnelopaefhbfjfffilm?hl=en&gl=US"
                           target="_blank"
@@ -198,16 +271,33 @@ function AboutPage() {
                       </li>
                       <li>Technologies: Javascript, HTML, CSS</li>
                     </ul>
-                  </li>
-                  <li>
-                    <p>
-                      <b>Daily Bruin </b>- Web Developer, <i>Los Angeles, CA</i>
-                      <span style={{ float: "right" }}>
-                        April 2019 - June 2020
-                      </span>
-                    </p>
+                      </CardBody>
+                    </Card>
+                    
+                    </UncontrolledCollapse>
+                    <tr>
+                      <td id="dailyBruin">
+                      <Row style={{padding: "20px 0px"}}>
+                          <Col xs="3" sm="2">
+                          <img src={require("assets/img/db-logo.png")} alt="daily bruin logo" style={{maxWidth:120}} ></img>
+                          </Col>
+                          <Col>
+                          <b>Daily Bruin</b>
+                          <p>
+                            Web Developer, <i>Los Angeles, CA</i>
+                          </p>
+                          <p>
+                            April 2019 - June 2020
+                          </p>
+                          </Col>
+                        </Row>
 
-                    <ul>
+                      </td>
+                    </tr>
+                    <UncontrolledCollapse toggler="#dailyBruin">
+                      <Card>
+                        <CardBody>
+                        <ul>
                       <li>
                         Built dynamic and interactive flatpages as a member of
                         the External Sites team.
@@ -225,8 +315,13 @@ function AboutPage() {
                       </li>
                       <li>Technologies: React, Typescript, Gatsby</li>
                     </ul>
-                  </li>
-                </ul>
+                 
+                        </CardBody>
+                      </Card>
+                  </UncontrolledCollapse>
+                  </tbody>
+                </Table>
+             
               </div>
             </Col>
           </Row>
@@ -234,74 +329,31 @@ function AboutPage() {
             <Col>
               <div>
                 <h4>Relevant Coursework</h4>
-                <Table hover>
-                  <tbody>
-                    <tr>
-                      <td id="cs180">
+                <ul>
+                      <li>
                         Introduction to Algorithms and Complexity
-                      </td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#cs180">
-                      Introduction to design and analysis of algorithms. Design
-                      techniques: divide-and-conquer, greedy method, dynamic
-                      programming; selection of prototypical algorithms; choice
-                      of data structures and representations; complexity
-                      measures: time, space, upper, lower bounds, asymptotic
-                      complexity; NP-completeness.
-                    </UncontrolledCollapse>
-                    <tr>
-                      <td id="cs111">Operating Systems Principles</td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#cs111">
-                      Introduction to operating systems design and evaluation.
-                      Computer software systems performance, robustness, and
-                      functionality. Kernel structure, bootstrapping,
-                      input/output (I/O) devices and interrupts. Processes and
-                      threads; address spaces, memory management, and virtual
-                      memory. Scheduling, synchronization. File systems: layout,
-                      performance, robustness.
-                    </UncontrolledCollapse>{" "}
-                    <tr>
-                      <td id="cs33">Introduction to Computer Organization</td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#cs33">
-                      Computer architecture, assembly language, and operating
-                      systems fundamentals. Number systems, machine language,
-                      and assembly language. Procedure calls, stacks,
-                      interrupts, and traps. Assemblers, linkers, and loaders.
-                      Operating systems concepts: processes and process
-                      management, input/output (I/O) programming, memory
-                      management, file systems.
-                    </UncontrolledCollapse>{" "}
-                    <tr>
-                      <td id="cs35l">Software Construction Laboratory</td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#cs35l">
-                      Fundamentals of commonly used software tools and
-                      environments, particularly open-source tools to be used in
-                      upper-division computer science courses.
-                    </UncontrolledCollapse>
-                    <tr>
-                      <td id="math33">Linear Alegbra and Applications</td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#math33">
-                      Introduction to linear algebra: systems of linear
-                      equations, matrix algebra, linear independence, subspaces,
-                      bases and dimension, orthogonality, least-squares methods,
-                      determinants, eigenvalues and eigenvectors, matrix
-                      diagonalization, and symmetric matrices.
-                    </UncontrolledCollapse>
-                    <tr>
-                      <td id="math61">Introduction to Discrete Structures</td>
-                    </tr>
-                    <UncontrolledCollapse toggler="#math61">
-                      Discrete structures commonly used in computer science and
-                      mathematics, including sets and relations, permutations
-                      and combinations, graphs and trees, induction.
-                    </UncontrolledCollapse>
-                  </tbody>
-                </Table>
-              </div>
+                       </li>
+                       <li>
+                         Operating Systems Principles
+                       </li>
+                       <li>
+                         Introduction to Computer Organization
+                       </li>
+                       <li>
+                         Software Contruction Laboratory
+                       </li>
+                       <li>
+                         Introduction to Discrete Structures
+                       </li>
+                    </ul>
+                     </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <NavLink tag={Link} to="/projects">
+                <h4>Projects</h4>
+              </NavLink>
             </Col>
           </Row>
         </Container>

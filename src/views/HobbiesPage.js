@@ -27,7 +27,6 @@ import {
   Media,
   Button,
 } from "reactstrap";
-import { Accordion } from "react-bootstrap";
 import "../assets/css/AboutPage.css";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -122,7 +121,7 @@ function HobbiesPage() {
       <div className="details">
         <Container>
           <Row>
-            <Col>
+            <Col  xs="12" sm="6">
               <div>
                 <h4 class="ultimate" name="ultimate">
                   Ultimate Frisbee
@@ -134,14 +133,14 @@ function HobbiesPage() {
                   senior year, I played for the Bay Area's U20 Mixed Team, Happy
                   Cows, at Youth Club Championships. After sidelined by a
                   concussion in 2019 while on UCLA Smaug, I've taken a safer
-                  approach to the game by Captaining the developmental team UCLA
+                  approach to the game by captaining the developmental team UCLA
                   Smoke.
                 </p>
               </div>
               <UncontrolledCarousel items={UltimateItems} interval="10000" />
             </Col>
 
-            <Col>
+            <Col xs="12" sm="6">
               <div>
                 <h4 class="photography" name="photography">
                   Food
@@ -156,12 +155,11 @@ function HobbiesPage() {
                 </p>
                 <br />
                 <a
-                  href="https://www.instagram.com/zhoumuchdough/?hl=en"
+                  href="https://breadbros.netlify.app/index"
                   target="_blank"
                 >
                   <Button color="primary">
-                    <i class="fa fa-instagram" aria-hidden="true"></i> Check out
-                    my Instagram here
+                     Visit my home bakery site here
                   </Button>
                 </a>
               </div>
@@ -169,16 +167,14 @@ function HobbiesPage() {
           </Row>
 
           <Row>
-            <Col>
+            <Col xs="12" sm="6">
               <Row>
                 <h4 class="music" name="music">
                   Music and Youtube
                 </h4>
 
                 <p>
-                  I began photography in the summer of 2014. Currently, I enjoy
-                  taking landscape shots, whether it be in busy cities or in
-                  nature. The following were all shot on a Sony A7 Mark III.
+                  I played music all my life whether it be piano, trumpet or guitar. Recently, I have been trying to take a stab a composing as well as making small music videos.
                 </p>
               </Row>
               <br />
@@ -223,7 +219,7 @@ function HobbiesPage() {
               </Row>
             </Col>
 
-            <Col>
+            <Col xs="12" sm="6">
               <div>
                 <h4 class="photography" name="photography">
                   Photography
