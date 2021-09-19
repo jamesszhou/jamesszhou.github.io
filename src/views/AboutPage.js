@@ -27,7 +27,8 @@ import {
   UncontrolledCollapse,
   Card,
   CardBody,
-  NavLink
+  Button
+  
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../assets/css/AboutPage.css";
@@ -128,7 +129,7 @@ function AboutPage() {
                     <tr>
                       <td id="uber">
                       <Row style={{padding: "20px 0px"}}>
-                          <Col xs="3" sm="2">
+                          <Col xs="4" sm="2">
                           <img src={require("assets/img/uber.svg")} alt="uber logo" ></img>
                           </Col>
                           <Col>
@@ -171,8 +172,8 @@ function AboutPage() {
                     <tr>
                       <td id="aws">
                         <Row style={{padding: "20px 0px"}}>
-                          <Col xs="3" sm="2">
-                          <img src={require("assets/img/aws.png")} alt="aws logo" ></img>
+                          <Col xs="4" sm="2">
+                          <img src={require("assets/img/aws.png")} alt="aws logo" style={{ height: "auto"}}></img>
                           </Col>
                           <Col>
                           <b>Amazon Web Services</b>
@@ -217,8 +218,8 @@ function AboutPage() {
                     <tr>
                       <td id="codeInspector">
                       <Row style={{padding: "20px 0px"}}>
-                          <Col xs="3" sm="2">
-                          <img src={require("assets/img/codeinspector.png")} alt="code inspector logo" style={{maxWidth:120}}></img>
+                          <Col xs="4" sm="2">
+                          <img src={require("assets/img/codeinspector.png")} alt="code inspector logo" style={{maxWidth:120, height: "auto"}}></img>
                           </Col>
                           <Col>
                           <b>Code Inspector</b>
@@ -278,8 +279,8 @@ function AboutPage() {
                     <tr>
                       <td id="dailyBruin">
                       <Row style={{padding: "20px 0px"}}>
-                          <Col xs="3" sm="2">
-                          <img src={require("assets/img/db-logo.png")} alt="daily bruin logo" style={{maxWidth:120}} ></img>
+                          <Col xs="4" sm="2">
+                          <img src={require("assets/img/db-logo.png")} alt="daily bruin logo" style={{maxWidth:120, height: "auto"}} ></img>
                           </Col>
                           <Col>
                           <b>Daily Bruin</b>
@@ -334,27 +335,47 @@ function AboutPage() {
                         Introduction to Algorithms and Complexity
                        </li>
                        <li>
+                       Data Structures
+                       </li>
+                       <li>
+                       Discrete Math
+                       </li>
+                       <li>
+                       Databases
+                       </li>
+                       <li>
                          Operating Systems Principles
                        </li>
                        <li>
-                         Introduction to Computer Organization
+                         Computer Architecture
                        </li>
                        <li>
-                         Software Contruction Laboratory
+                       Distributed Algorithms and Blockchains 
                        </li>
                        <li>
-                         Introduction to Discrete Structures
+                       Machine Learning/AI
                        </li>
+                       <li>
+                       Networking
+                       </li>
+                  
                     </ul>
                      </div>
             </Col>
           </Row>
           <Row>
-            <Col>
-              <NavLink tag={Link} to="/projects">
-                <h4>Projects</h4>
-              </NavLink>
-            </Col>
+            
+            <Link tag={Link} to="/projects">
+            <div>
+            <Button>
+              
+              Check out my Projects Here
+              
+              </Button>
+            </div>
+            </Link>
+            
+        
           </Row>
         </Container>
       </div>

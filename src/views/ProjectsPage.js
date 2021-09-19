@@ -58,6 +58,47 @@ function ProjectsPage() {
         </div>
 
         <div>
+        <div>
+            <h4 class="MLProject" name="MLProject">
+            Drug Release Prediction
+            </h4>
+            
+            <Row>
+              <Col lg="6">
+              <h6>Description</h6>
+                <ul>
+                  <li>
+                    <p>
+                    Predictive model expressing the drug release profile of particular capsule. This project gave researchers a quick estimated graph at a moments notice which circumvented the need to repetitively adjust parameters on simulation software which took minutes to run. 
+                    </p>
+                  </li>
+                </ul>
+                <h6>Design</h6>
+                <ul class="textList">
+                  <li>
+                    <p>
+                      Used three layer Neural Network using the Adam Optimizer through Pytorch library. 
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The graphs display here display the estimated run on with unseen parameters. The original line showcases the results if the parameters were fed to the simulation software. A line at 50% is drawn using linear interpolation to showcase at what time the drug has been halfway released from the capsule.
+                    </p>
+                    
+                  </li>
+                </ul>
+              </Col>
+              <Col lg="6">
+                <img
+                  src={require("assets/img/drug_prediction.png")}
+                  alt="Drug Prediction"
+                />
+              </Col>
+            </Row>
+            
+          </div>
+
+      
           <div>
             <h4 class="Extension" name="Extension">
               Code Inspector Chrome Extension
@@ -158,7 +199,7 @@ function ProjectsPage() {
           <Row>
             <Col>
               <div>
-                <h4 class="Extension" name="Extension">
+                <h4 class="iAwake" name="iAwake">
                   iAwake
                 </h4>
                 <h6>Description</h6>
@@ -256,7 +297,7 @@ function ProjectsPage() {
           </Row>
 
           <div>
-            <h4 class="Extension" name="Extension">
+            <h4 class="ZombieDash" name="ZombieDash">
               ZombieDash
             </h4>
             <h6>Description</h6>
