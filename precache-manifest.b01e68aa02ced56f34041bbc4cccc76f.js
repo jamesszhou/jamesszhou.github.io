@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "531e673a3d98e62970d71e58c36f7648",
+    "revision": "f67cb4e6c0c1ad3991ddaed3a3c70bee",
     "url": "/index.html"
   },
   {
-    "revision": "fc4923d7bd686e03c8fb",
+    "revision": "4da67ea4dd7c0b829a1b",
     "url": "/static/css/main.a76c431b.chunk.css"
   },
   {
-    "revision": "8fcb953cd0d331008acc",
-    "url": "/static/js/2.27b7870d.chunk.js"
+    "revision": "32e7674d4dab0bd71c26",
+    "url": "/static/js/2.8cc1d981.chunk.js"
   },
   {
-    "revision": "fc4923d7bd686e03c8fb",
-    "url": "/static/js/main.09e596a8.chunk.js"
+    "revision": "4da67ea4dd7c0b829a1b",
+    "url": "/static/js/main.518c0b93.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "678fb88e7d8f08877d443fd475057bed",
     "url": "/static/media/db-logo.678fb88e.png"
+  },
+  {
+    "revision": "cb84c4166a1de6ad68b113657306386d",
+    "url": "/static/media/drug_prediction.cb84c416.png"
   },
   {
     "revision": "e4e44af322f98f5f0990ae80599f12d7",
